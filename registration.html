@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Registration | Gravitas 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/vit-logo.png" alt="Vellore Institute of Technology logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+    <nav id="nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="registration.html" class="active">Register</a>
+      <a href="volunteers.html">Volunteers</a>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1 class="page-title">Volunteer registration</h1>
+    <p class="lead">Fill in your details to join the Gravitas 2026 volunteer team. All fields are required.</p>
+
+    <div id="successMessage" class="alert alert-success" role="status" hidden>
+      Registration successful! You have been added to the volunteer list.
+      <a href="volunteers.html">View registered volunteers</a>
+    </div>
+
+    <form id="registrationForm" class="form-card" novalidate>
+      <div class="field">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter Name" autocomplete="name">
+        <span class="error" id="fullNameError" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="regNo">Registration number</label>
+        <input type="text" id="regNo" name="regNo" placeholder="Enter Register Number" maxlength="9" autocomplete="off">
+        <span class="error" id="regNoError" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="name@vitstudent.ac.in" autocomplete="email">
+        <span class="error" id="emailError" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel">
+        <span class="error" id="phoneError" aria-live="polite"></span>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="year">Year of study</label>
+          <select id="year" name="year">
+            <option value="">Select year</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+          </select>
+          <span class="error" id="yearError" aria-live="polite"></span>
+        </div>
+
+        <div class="field">
+          <label for="team">Preferred team</label>
+          <select id="team" name="team">
+            <option value="">Select team</option>
+            <option value="Technical Events">Technical Events</option>
+            <option value="Management Events">Management Events</option>
+            <option value="Design and Media">Design and Media</option>
+            <option value="Logistics">Logistics</option>
+            <option value="Hospitality">Hospitality</option>
+            <option value="Registration Desk">Registration Desk</option>
+          </select>
+          <span class="error" id="teamError" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <fieldset class="field">
+        <legend>Availability</legend>
+        <div class="radio-group">
+          <label><input type="radio" name="availability" value="Day 1"> Day 1</label>
+          <label><input type="radio" name="availability" value="Day 2"> Day 2</label>
+          <label><input type="radio" name="availability" value="Day 3"> Day 3</label>
+          <label><input type="radio" name="availability" value="All days"> All days</label>
+        </div>
+        <span class="error" id="availabilityError" aria-live="polite"></span>
+      </fieldset>
+
+      <div class="field">
+        <label class="check">
+          <input type="checkbox" id="agree" name="agree">
+          I agree to follow the festival volunteer guidelines.
+        </label>
+        <span class="error" id="agreeError" aria-live="polite"></span>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="reset" class="btn btn-ghost" id="resetBtn">Clear form</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Gravitas, Vellore Institute of Technology. Volunteer Registration Portal.</p>
+  </footer>
+
+  <script src="js/volunteers.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

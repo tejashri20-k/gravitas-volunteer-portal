@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registered Volunteers | Gravitas 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/vit-logo.png" alt="Vellore Institute of Technology logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+    <nav id="nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="registration.html">Register</a>
+      <a href="volunteers.html" class="active">Volunteers</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Registered volunteers</h1>
+
+    <div class="toolbar">
+      <div class="total-badge">
+        Total registered volunteers: <strong id="totalCount">0</strong>
+      </div>
+      <div class="search-box">
+        <label for="searchInput" class="sr-only">Search volunteers</label>
+        <input type="search" id="searchInput" placeholder="Search by name, reg. no, email, team...">
+      </div>
+    </div>
+
+    <p id="resultInfo" class="result-info" aria-live="polite"></p>
+
+    <div class="table-wrap">
+      <table id="volunteerTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Reg. No</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Year</th>
+            <th>Team</th>
+            <th>Availability</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="volunteerBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Gravitas, Vellore Institute of Technology. Volunteer Registration Portal.</p>
+  </footer>
+
+  <script src="js/volunteers.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
